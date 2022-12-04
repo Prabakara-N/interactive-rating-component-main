@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Custom Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+
+    <title>Interactive Rating Component</title>
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--normalize CSS -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- section 1 start -->
+    <section class="card show" id="show">
+      <div class="img-container">
+        <img src="./images/icon-star.svg" alt="star" class="icon" />
+      </div>
+      <h1 class="title">How did we do?</h1>
+      <p class="card-para">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <div class="rating-btn-container">
+        <input type="button" name="rating" class="rating-input" value="1" />
+        <input type="button" name="rating" class="rating-input" value="2" />
+        <input type="button" name="rating" class="rating-input" value="3" />
+        <input type="button" name="rating" class="rating-input" value="4" />
+        <input type="button" name="rating" class="rating-input" value="5" />
+      </div>
+
+      <button class="btn-submit" id="btn-submit">SUBMIT</button>
+    </section>
+    <!-- section 1 start -->
+
+    <section class="hidden-card hidden" id="hidden-card">
+      <div class="hidden-img">
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="thank-you"
+          class="img"
+        />
+      </div>
+      <p class="rating-output" id="output">You selected 4 out of 5</p>
+      <h1 class="thanku-msg">Thank You!</h1>
+      <p class="hidden-para">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
+    </section>
+
+    <!-- Custom JavaScript -->
+    <script src="./script/script.js"></script>
+  </body>
+</html>
