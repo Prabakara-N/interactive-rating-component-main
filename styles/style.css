@@ -82,7 +82,6 @@ body {
   background-color: var(--clr-Medium-Grey);
   color: var(--clr-White);
   transition: 0.3s;
-  transform: scale(0.95) translateZ(-5px);
 }
 
 .btn-submit {
@@ -106,7 +105,7 @@ body {
 
 .hidden-card {
   max-width: 90%;
-  padding: 1.75rem;
+  padding: 1.25rem;
   background-color: var(--clr-Dark-Blue);
   border-radius: 20px;
 }
@@ -114,7 +113,7 @@ body {
 .img {
   width: 180px;
   height: 110px;
-  margin-left: 4.75rem;
+  margin-left: 5rem;
 }
 
 .rating-output {
@@ -137,8 +136,27 @@ body {
 }
 
 .hidden-para {
+  margin-top: -5px;
   color: var(--clr-Light-Grey);
   text-align: center;
+}
+
+.btn-ok {
+  margin-left: 9.7rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  cursor: pointer;
+  background-color: #2d3743;
+  border: none;
+  color: var(--clr-White);
+  border-radius: 20px;
+}
+
+.btn-ok:hover {
+  background-color: var(--clr-Medium-Grey);
+  transition: all 0.3s;
+  transform: scale(0.97) translateZ(-3px);
 }
 
 .show {
