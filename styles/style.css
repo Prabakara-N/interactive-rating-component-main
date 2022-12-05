@@ -93,6 +93,7 @@ body {
   background-color: var(--clr-Orange);
   color: var(--clr-White);
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 .btn-submit:hover {
@@ -142,7 +143,7 @@ body {
 }
 
 .btn-ok {
-  margin-left: 9.7rem;
+  margin-left: 8rem;
   font-size: 0.9rem;
   font-weight: bold;
   padding: 4px 8px;
@@ -167,7 +168,18 @@ body {
   display: none;
 }
 
+.selected {
+  transform: scale(0.95) translateZ(-5px);
+  background-color: #fb7413;
+  color: #fff;
+}
+
 /* media queory */
+@media screen and (min-width: 425px) {
+  .btn-ok {
+    margin-left: 9.2rem;
+  }
+}
 
 @media screen and (min-width: 475px) {
   .card {
@@ -179,5 +191,9 @@ body {
     width: 400px;
     min-width: 0;
     margin: auto;
+  }
+
+  .btn-ok {
+    margin-left: 9.7rem;
   }
 }

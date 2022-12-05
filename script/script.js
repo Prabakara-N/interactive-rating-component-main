@@ -8,18 +8,31 @@ const outputEl = document.getElementById("output");
 const btnOk = document.getElementById("btnok");
 
 //global variable
+
 let rating = 0;
+
 //functions
 
+const displayUI = function (index) {
+  for (let i = 0; i < inputBtnEl.length; i++) {
+    if (i === index) {
+      inputBtnEl[i].classList.add("selected");
+    } else {
+      inputBtnEl[i].classList.remove("selected");
+    }
+  }
+};
+
 //event listners
+
 for (let i = 0; i < inputBtnEl.length; i++) {
   inputBtnEl[i].addEventListener("click", function () {
     rating = Number(this.value);
-    this.style.transform = "scale(0.95) translateZ(-5px)";
-    this.style.backgroundColor = "#fb7413";
-    this.style.color = "#ffffff";
+    displayUI(rating - 1);
   });
 }
+
+//when we click submit hidden card will open
 
 btnSubmit.addEventListener("click", function () {
   cardEl.classList.remove("show");
@@ -31,6 +44,8 @@ btnSubmit.addEventListener("click", function () {
   outputEl.innerText = `You Selected ${rating} out of 5`;
 });
 
+//when we click ok rating card will open
+
 btnOk.addEventListener("click", function () {
   cardEl.classList.remove("hidden");
   cardEl.classList.add("show");
@@ -39,4 +54,7 @@ btnOk.addEventListener("click", function () {
   hiddenEl.classList.add("hidden");
 
   inputBtnEl.value = null;
+  for (let i = 0; i < inputBtnEl.length; i++) {
+    inputBtnEl[i].classList.remove("selected");
+  }
 });
