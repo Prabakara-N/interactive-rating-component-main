@@ -8,10 +8,13 @@ const outputEl = document.getElementById("output");
 const btnOk = document.getElementById("btnok");
 
 //global variable
-
-let rating = 0;
+let rating;
 
 //functions
+function init() {
+  rating = 0;
+  outputEl.innerText = 0;
+}
 
 const displayUI = function (index) {
   for (let i = 0; i < inputBtnEl.length; i++) {
@@ -35,25 +38,23 @@ for (let i = 0; i < inputBtnEl.length; i++) {
 //when we click submit hidden card will open
 
 btnSubmit.addEventListener("click", function () {
-  cardEl.classList.remove("show");
-  cardEl.classList.add("hidden");
+  if (rating === 0) {
+    alert("Select a valid rating");
+  } else {
+    hiddenEl.classList.remove("hidden");
+    cardEl.classList.add("hidden");
 
-  hiddenEl.classList.remove("hidden");
-  hiddenEl.classList.add("show");
-
-  outputEl.innerText = `You Selected ${rating} out of 5`;
+    outputEl.innerText = `You Selected ${rating} out of 5`;
+  }
 });
 
 //when we click ok rating card will open
 
 btnOk.addEventListener("click", function () {
-  cardEl.classList.remove("hidden");
-  cardEl.classList.add("show");
-
-  hiddenEl.classList.remove("show");
   hiddenEl.classList.add("hidden");
-
-  inputBtnEl.value = null;
+  cardEl.classList.remove("hidden");
+  init();
+  // inputBtnEl.value = null;
   for (let i = 0; i < inputBtnEl.length; i++) {
     inputBtnEl[i].classList.remove("selected");
   }

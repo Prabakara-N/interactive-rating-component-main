@@ -160,10 +160,6 @@ body {
   transform: scale(0.97) translateZ(-3px);
 }
 
-.show {
-  display: block;
-}
-
 .hidden {
   display: none;
 }
